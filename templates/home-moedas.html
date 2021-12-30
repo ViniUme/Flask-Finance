@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='style.css')}}">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>cotação de moedas</h1>
+    <h2>baseadas no real (R$) </h2>
+    <section class="cotainer">
+
+        {% for itens in list_moedas %}
+            <div calss="box">
+                <label class="nome">{{itens.nome}}</label>
+                <label class="preco">R$ {{itens.preco}}</label>
+            </div>
+        {% endfor %}
+    </section>
+    
+</body>
+</html>
