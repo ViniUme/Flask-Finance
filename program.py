@@ -3,9 +3,10 @@ import requests
 import json
 
 class Moedas():
-    def __init__(self, nome, preco):
+    def __init__(self, nome, preco, variacao):
         self.nome = nome
         self.preco = preco
+        self.variacao = variacao
 
 app = Flask(__name__)
 
@@ -23,8 +24,9 @@ def home():
         url = const_url[itens]
         
         nome = url["name"]
-        preco = url["buy"]
-        list_moedas.append(Moedas(nome, preco))
+        preco = round(float(url["buy"]), 2)
+        variacao = float(url["variation"])
+        list_moedas.append(Moedas(nome, preco, variacao))
     
     
     return render_template("home-moedas.html", list_moedas = list_moedas)
