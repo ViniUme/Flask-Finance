@@ -3,7 +3,8 @@ import requests
 import json
 
 class Moedas():
-    def __init__(self, nome, preco, variacao):
+    def __init__(self, abre, nome, preco, variacao):
+        self.abre = abre
         self.nome = nome
         self.preco = preco
         self.variacao = variacao
@@ -23,10 +24,11 @@ def home():
     for itens in names:
         url = const_url[itens]
         
+        abre = itens
         nome = url["name"]
-        preco = round(float(url["buy"]), 2)
+        preco = str(round(float(url["buy"]), 2)).replace("." , ",")
         variacao = float(url["variation"])
-        list_moedas.append(Moedas(nome, preco, variacao))
+        list_moedas.append(Moedas(abre, nome, preco, variacao))
     
     
     return render_template("home-moedas.html", list_moedas = list_moedas)

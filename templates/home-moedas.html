@@ -4,10 +4,13 @@
     <!-- Link da fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="{{ url_for('static' , filename='style.css')}}">
@@ -26,11 +29,11 @@
                 {% if (itens.variacao < 0) %}
                     <label class="variacao negativo">{{itens.variacao}}%</label>
                 {% elif (itens.variacao > 0) %}
-                    <label class="variacao positivo">{{itens.variacao}}%    </label>
+                    <label class="variacao positivo">{{itens.variacao}}%</label>
                 {% endif %}
                 <br>
                 <label class="preco">R$ {{itens.preco}}</label><br>
-                <label class="nome">{{itens.nome}}</label>
+                <label class="nome">{{itens.abre}} {{itens.nome}}</label>
             </div>
         {% endfor %}
     </section>
