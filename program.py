@@ -26,7 +26,8 @@ def home():
         
         abre = itens
         nome = url["name"]
-        preco = str(round(float(url["buy"]), 2)).replace("." , ",")
+        preco = round(float(url["buy"]), 2)
+        preco = '{0:_}'.format(preco).replace('.',',').replace('_','.')
         variacao = float(url["variation"])
         list_moedas.append(Moedas(abre, nome, preco, variacao))
     

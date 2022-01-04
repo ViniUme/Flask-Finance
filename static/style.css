@@ -9,11 +9,8 @@ body{
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    display: inline-block;
-    margin: auto;
-    left: 0;
-    right: 0;
-    margin-top: 15%;
+    display: block;
+    margin-top: 8%;
     margin-bottom: 20px;
 }
 
@@ -26,6 +23,7 @@ body{
     right: 0;
     justify-content: center;
     background-color: #03396C;
+    margin-bottom: 30px;
 }
 
 .box{
