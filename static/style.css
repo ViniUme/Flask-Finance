@@ -1,5 +1,5 @@
 body{
-    background-color: #011F4B;
+    background-color: #23272a;
     margin: 0;
     color: white;
     text-align: center;
@@ -15,15 +15,16 @@ body{
 }
 
 .container{
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     left: 0;
     right: 0;
     justify-content: center;
-    background-color: #03396C;
+    background-color: #313438;
     margin-bottom: 30px;
+    border-radius: 20px;
 }
 
 .box{
@@ -34,7 +35,7 @@ body{
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
-    border: black 1px solid;
+    border-bottom: #99aab5 2px solid;
 }
 
 .nome{
