@@ -14,6 +14,7 @@
 
 
     <link rel="stylesheet" href="{{ url_for('static' , filename='home-moedas.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='nav-style.css')}}">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +22,14 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <a href="/moedas"><li>moedas</li></a>
+                <a href="/bitcoin"><li>bitcoins</li></a>
+            </ul>
+        </nav>
+    </header>
     <section class="align">
         <h1 class="title">cotação da principais moedas para o real</h1>
         <section class="container">
@@ -31,7 +40,7 @@
                     {% elif (itens.variacao > 0) %}
                         <label class="variacao positivo">{{itens.variacao}}%</label>
                     {% else %}
-                        <label class="variacao neutro">0.000</label>
+                        <label class="variacao neutro">0.000%</label>
                     {% endif %}
                     <br>
                     <label class="preco">R$ {{itens.preco}}</label><br>

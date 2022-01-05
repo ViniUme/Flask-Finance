@@ -2,12 +2,7 @@ from flask import Flask, render_template
 import requests
 import json
 
-class Moedas():
-    def __init__(self, abre, nome, preco, variacao):
-        self.abre = abre
-        self.nome = nome
-        self.preco = preco
-        self.variacao = variacao
+from Moedas import Moedas
 
 app = Flask(__name__)
 
@@ -16,13 +11,13 @@ app = Flask(__name__)
 def home():
     
     names = ["USD", "EUR", "GBP", "ARS", "CAD", "AUD", "JPY", "CNY", "BTC"]
-    const_url = json.loads(requests.get(f"https://api.hgbrasil.com/finance").text)
+    moedas_url = json.loads(requests.get(f"https://api.hgbrasil.com/finance/quotations?format=debug&key=a99c1c5e").text)
     list_moedas = []
     
-    const_url = const_url["results"]["currencies"]
+    moedas_url = moedas_url["results"]["currencies"]
     
     for itens in names:
-        url = const_url[itens]
+        url = moedas_url[itens]
         
         abre = itens
         nome = url["name"]
