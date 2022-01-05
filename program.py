@@ -44,7 +44,7 @@ def Bitcoin():
     api_url = api_url["results"]["bitcoin"]
 
     for itens in names:
-        
+
         url = api_url[itens]
 
         nome = url["name"]
