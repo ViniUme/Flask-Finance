@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <!-- Link da fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="{{ url_for('static' , filename='style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='home-moedas.css')}}">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,20 +21,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="title">cotação da principais moedas para o real</h1>
-    <section class="container">
-        {% for itens in list_moedas %}
-            <div class="box">
-                {% if (itens.variacao < 0) %}
-                    <label class="variacao negativo">{{itens.variacao}}%</label>
-                {% elif (itens.variacao > 0) %}
-                    <label class="variacao positivo">{{itens.variacao}}%</label>
-                {% endif %}
-                <br>
-                <label class="preco">R$ {{itens.preco}}</label><br>
-                <label class="nome">{{itens.abre}} {{itens.nome}}</label>
-            </div>
-        {% endfor %}
+    <section class="align">
+        <h1 class="title">cotação da principais moedas para o real</h1>
+        <section class="container">
+            {% for itens in list_moedas %}
+                <div class="box">
+                    {% if (itens.variacao < 0) %}
+                        <label class="variacao negativo">{{itens.variacao}}%</label>
+                    {% elif (itens.variacao > 0) %}
+                        <label class="variacao positivo">{{itens.variacao}}%</label>
+                    {% else %}
+                        <label class="variacao neutro">0.000</label>
+                    {% endif %}
+                    <br>
+                    <label class="preco">R$ {{itens.preco}}</label><br>
+                    <label class="nome">{{itens.abre}} {{itens.nome}}</label>
+                </div>
+            {% endfor %}
+        </section>
     </section>
 </body>
 </html>

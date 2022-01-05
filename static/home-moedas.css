@@ -9,18 +9,24 @@ body{
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    display: block;
-    margin-top: 8%;
-    margin-bottom: 20px;
-}
-
-.container{
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
+    position: absolute;
     margin: auto;
     left: 0;
     right: 0;
+    top: -35px;
+}
+
+.align{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container{
+    width: 750px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-color: #313438;
     margin-bottom: 30px;
@@ -52,20 +58,21 @@ body{
 
 .variacao{
     font-family: 'Nunito', sans-serif;
+    display: inline-block;
     font-size: 12px;
     text-align: center;
     border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 700;
+    width: 65px;
 }
 .negativo{
-    display: inline-block;
-    width: 65px;
     background-color: #ff0000;
 }
 .positivo{
-    display: inline-block;
-    width: 65px;
     background-color: #00cc00;
+}
+.neutro{
+    background-color: #585858;
 }
