@@ -2,7 +2,9 @@
 <html lang="pt-BR">
 <head>
 
-    <link rel="stylesheet" href="{{ url_for='static' , filename='nav-style.css'}}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='default-body.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='nav-style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='bitcoin-page.css')}}">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,5 +20,22 @@
             </ul>
         </nav>
     </header>
+
+    <section class="align">
+        <section class="container">
+            {% for itens in list_bitcoin %}
+                <div class="box">
+                    <label class="variacao">{{itens.variacao}}%</label><br>
+                    {% if itens.nome == "Mercado Bitcoin" %}
+                        <label class="preco">R$ {{itens.preco}}</label>
+                    {% else %}
+                        <label class="preco">US$ {{itens.preco}}</label>
+                    {% endif %}
+                    <br>
+                    <label class="nome">{{itens.nome}}</label>
+                </div>
+            {% endfor %}
+        </section>
+    </section>
 </body>
 </html>
