@@ -2,29 +2,31 @@
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: -35px;
+    width: 100%;
 }
 
 .align{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-}
-
-.container{
-    width: 750px;
+    width: 100%;
+    height: auto;
+    margin-top: 5vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.centralization{
+    width: 60%;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
     background-color: #313438;
-    margin-bottom: 30px;
     border-radius: 20px;
+    margin-bottom: 50px;
 }
 
 .box{

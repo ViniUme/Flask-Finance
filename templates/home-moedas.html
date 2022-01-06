@@ -4,7 +4,6 @@
 
     <link rel="stylesheet" href="{{ url_for('static' , filename='default-body.css')}}">
     <link rel="stylesheet" href="{{ url_for('static' , filename='home-moedas.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static' , filename='nav-style.css')}}">
     <link rel="stylesheet" href="{{ url_for('static' , filename='cotacao-container.css')}}">
 
     <meta charset="UTF-8">
@@ -13,32 +12,53 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="list">
-                <a href="/moedas" class="list-link"><li class="list-elements">moedas</li></a>
-                <a href="/bitcoin" class="list-link"><li class="list-elements">bitcoins</li></a>
-            </ul>
-        </nav>
-    </header>
     <section class="align">
-        <h1 class="title">cotação da principais moedas para o real</h1>
-        <section class="container">
-            {% for itens in list_moedas %}
-                <div class="box">
-                    {% if (itens.variacao < 0) %}
-                        <label class="variacao negativo">{{itens.variacao}}%</label>
-                    {% elif (itens.variacao > 0) %}
-                        <label class="variacao positivo">{{itens.variacao}}%</label>
-                    {% else %}
-                        <label class="variacao neutro">0.000%</label>
-                    {% endif %}
-                    <br>
-                    <label class="preco">R$ {{itens.preco}}</label><br>
-                    <label class="nome">{{itens.abre}} {{itens.nome}}</label>
-                </div>
-            {% endfor %}
-        </section>
+        <div class="centralization">
+            <h1 class="title">cotação da principais moedas para o real</h1>
+            <section class="container">
+                {% for itens in list_moedas %}
+                    <div class="box">
+                        {% if (itens.variacao < 0) %}
+                            <label class="variacao negativo">{{itens.variacao}}%</label>
+                        {% elif (itens.variacao > 0) %}
+                            <label class="variacao positivo">{{itens.variacao}}%</label>
+                        {% else %}
+                            <label class="variacao neutro">0.000%</label>
+                        {% endif %}
+                        <br>
+                        <label class="preco">R$ {{itens.preco}}</label><br>
+                        <label class="nome">{{itens.abre}} {{itens.nome}}</label>
+                    </div>
+                {% endfor %}
+            </section>
+        </div>
+
+        <div class="centralization">
+            <h1 class="title">cotação do bitcoin nas principais corretoras</h1>
+            <section class="container">
+                {% for itens in list_bitcoin %}
+                    <div class="box">
+                        {% if itens.variacao < 0 %}
+                            <label class="variacao negativo">{{itens.variacao}}%</label>
+                        {% elif itens.variacao > 0 %}
+                            <label class="variacao positivo">{{itens.variacao}}%</label>
+                        {% else %}
+                            <label class="variacao neutro">{{itens.variacao}}%</label>
+                        {% endif %}
+
+                        <br>
+
+                        {% if itens.nome == "Mercado Bitcoin" %}
+                            <label class="preco">R$ {{itens.preco}}</label>
+                        {% else %}
+                            <label class="preco">US$ {{itens.preco}}</label>
+                        {% endif %}
+                        <br>
+                        <label class="nome">{{itens.nome}}</label>
+                    </div>
+                {% endfor %}
+            </section>
+        </div>
     </section>
 </body>
 </html>

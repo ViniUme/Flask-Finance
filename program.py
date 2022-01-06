@@ -8,16 +8,18 @@ app = Flask(__name__)
 @app.route("/moedas")
 def Home():
 
+    #parte das moedas
     from Moedas import Moedas
 
-    names = ["USD", "EUR", "GBP", "ARS", "CAD", "AUD", "JPY", "CNY", "BTC"]
-    api_url = json.loads(requests.get(f"https://api.hgbrasil.com/finance/quotations?format=debug&key=a99c1c5e").text)
+    names_moedas = ["USD", "EUR", "GBP", "ARS", "CAD", "AUD", "JPY", "CNY", "BTC"]
+    api_url = json.loads(requests.get(f"https://api.hgbrasil.com/finance/quotations?key=a99c1c5e").text)
     list_moedas = []
     
-    api_url = api_url["results"]["currencies"]
+    api_url_moedas = api_url["results"]["currencies"]
     
-    for itens in names:
-        url = api_url[itens]
+    for itens in names_moedas:
+
+        url = api_url_moedas[itens]
         
         abre = itens
         nome = url["name"]
@@ -25,25 +27,19 @@ def Home():
         preco = '{0:_}'.format(preco).replace('.',',').replace('_','.')
         variacao = url["variation"]
         list_moedas.append(Moedas(abre, nome, preco, variacao))
-    
-    
-    return render_template("home-moedas.html", list_moedas = list_moedas)
 
-@app.route("/bitcoin")
-def Bitcoin():
-
+    #parte das bitcoin
     from Bitcoin import Bitcoin
 
-    names = ["blockchain_info" , "coinbase" , "bitstamp" , "foxbit" , "mercadobitcoin"]
-    api_url = json.loads(requests.get(f"https://api.hgbrasil.com/finance/quotations?key=a99c1c5e").text)
+    names_bitcoin = ["blockchain_info" , "coinbase" , "bitstamp" , "foxbit" , "mercadobitcoin"]
 
     list_bitcoin = []
 
-    api_url = api_url["results"]["bitcoin"]
+    api_url_bitcoin = api_url["results"]["bitcoin"]
 
-    for itens in names:
+    for itens in names_bitcoin:
 
-        url = api_url[itens]
+        url = api_url_bitcoin[itens]
 
         nome = url["name"]
         preco = round(float(url["last"]), 2)
@@ -51,8 +47,8 @@ def Bitcoin():
         variacao = url["variation"]
 
         list_bitcoin.append(Bitcoin(nome, preco, variacao))
-
-    return render_template("bitcoin-page.html", list_bitcoin = list_bitcoin)
+    
+    return render_template("home-moedas.html", list_moedas = list_moedas, list_bitcoin = list_bitcoin)
 
 if (__name__ == "__main__"):
     app.run(debug=True)
