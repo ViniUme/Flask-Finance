@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{{ url_for('static' , filename='default-body.css')}}">
     <link rel="stylesheet" href="{{ url_for('static' , filename='nav-style.css')}}">
     <link rel="stylesheet" href="{{ url_for('static' , filename='bitcoin-page.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='cotacao-container.css')}}">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +26,16 @@
         <section class="container">
             {% for itens in list_bitcoin %}
                 <div class="box">
-                    <label class="variacao">{{itens.variacao}}%</label><br>
+                    {% if itens.variacao < 0 %}
+                        <label class="variacao negativo">{{itens.variacao}}%</label>
+                    {% elif itens.variacao > 0 %}
+                        <label class="variacao positivo">{{itens.variacao}}%</label>
+                    {% else %}
+                        <label class="variacao neutro">{{itens.variacao}}%</label>
+                    {% endif %}
+
+                    <br>
+
                     {% if itens.nome == "Mercado Bitcoin" %}
                         <label class="preco">R$ {{itens.preco}}</label>
                     {% else %}

@@ -1,18 +1,24 @@
 .align{
-    width: max-content;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
 }
 
 .container{
     width: 70%;
+    height: auto;
+    height: max-content;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     background-color: #313438;
 }
 
 .box{
-    width: 200px;
+    width: 150px;
+    height: 120px;
+    border: white 1px solid;
+    margin: 15px;
 }

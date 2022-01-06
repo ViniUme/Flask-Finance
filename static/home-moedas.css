@@ -18,8 +18,7 @@
 }
 
 .container{
-    width: 60%;
-    height: auto;
+    width: 750px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -37,37 +36,4 @@
     margin-bottom: 15px;
     text-align: center;
     border-bottom: #99aab5 2px solid;
-}
-
-.nome{
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    display: inline-block;
-    margin-top: 5px;
-}
-.preco{
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-}
-
-.variacao{
-    font-family: 'Nunito', sans-serif;
-    display: inline-block;
-    font-size: 12px;
-    text-align: center;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    width: 65px;
-}
-.negativo{
-    background-color: #ff0000;
-}
-.positivo{
-    background-color: #00cc00;
-}
-.neutro{
-    background-color: #585858;
 }
