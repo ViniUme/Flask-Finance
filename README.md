@@ -2,16 +2,6 @@
  
  <a href="https://github.com/ViniUme/Flask-Finance/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/ViniUme/Flask-Finance?color=%23e0003e&style=for-the-badge"></a>
 
-## Table of Contents
-* [About](##About)
-* [Technologies Used](##Technologies)
- 
-<br><hr width="100%"><br>
-
-## Accesse the site <a href="https://flask-finace.herokuapp.com/">here</a>
-
-![img1](https://user-images.githubusercontent.com/66230638/148692994-15ad189c-2b0b-40a4-becc-9fa0e84786b9.PNG)
-
 <br>
 
 ## About
@@ -46,5 +36,11 @@
         </tr>
     </tr>
 </table>
+
+<br><br>
+
+## Accesse the site <a href="https://flask-finace.herokuapp.com/">here</a>
+
+![img1](https://user-images.githubusercontent.com/66230638/148692994-15ad189c-2b0b-40a4-becc-9fa0e84786b9.PNG)
 
 ### This is the main dependencies, the other dependencies can be see in archive requiriments.txt
