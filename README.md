@@ -1,6 +1,6 @@
 # Flask-Finance
  
- <a href="https://github.com/ViniUme/Flask-Finance/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/ViniUme/Flask-Finance?color=%23D73632&style=for-the-badge"></a>
+ <a href="https://github.com/ViniUme/Flask-Finance/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/ViniUme/Flask-Finance?color=%23e0003e&style=for-the-badge"></a>
 
 ## Table of Contents
 * [About](##About)
