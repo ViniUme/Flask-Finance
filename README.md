@@ -1,27 +1,50 @@
 # Flask-Finance
  
+ <a href="https://github.com/ViniUme/Flask-Finance/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/ViniUme/Flask-Finance?color=%23D73632&style=for-the-badge"></a>
+
 ## Table of Contents
 * [About](##About)
 * [Technologies Used](##Technologies)
  
+<br><hr width="100%"><br>
+
+## Accesse the site <a href="https://flask-finace.herokuapp.com/">here</a>
+
+![img1](https://user-images.githubusercontent.com/66230638/148692994-15ad189c-2b0b-40a4-becc-9fa0e84786b9.PNG)
+
+<br>
+
 ## About
  This project is a website that use data of the a API, the <a href="https://hgbrasil.com/">HG Brasil</a>, in the area of <a href="https://hgbrasil.com/status/finance">Finance</a>. in this API, is available data of price of stock exchange, price of the principais coins, price of bitcoin in different sites and lot more. I made this site to learn to use the Flask, to make requests in APIs and to upgrade my skills in HTML and CSS
 
 <br><hr width="100%"><br>
 
 ## Technologies Used
+
 <table>
     <tr>
-        <td>Python</td>
-        <td>Flask</td>
-        <td>Requests</td>
-    </tr>
+        <th>Front-End</th>
     <tr>
-        <td>3.9.9</td>
-        <td>2.0.2</td>
-        <td>2.26.0</td>
+    <tr>
+        <tr>
+            <td>HTML</td>
+            <td>CSS</td>
+        </tr>
+    </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <th>Back-End</th>
+    <tr>
+    <tr>
+        <tr>
+            <td>Python</td>
+            <td>Flask</td>
+            <td>Requests</td>
+            <td>Heroku</td>
+        </tr>
     </tr>
 </table>
 
-This is the main dependencies,
-the other dependencies can be see in archive requiriments.txt
+### This is the main dependencies, the other dependencies can be see in archive requiriments.txt
