@@ -11,36 +11,25 @@
 
 ## Technologies Used
 
-<table>
-    <tr>
-        <th>Front-End</th>
-    <tr>
-    <tr>
-        <tr>
-            <td>HTML</td>
-            <td>CSS</td>
-        </tr>
-    </tr>
-</table>
-<br>
-<table>
-    <tr>
-        <th>Back-End</th>
-    <tr>
-    <tr>
-        <tr>
-            <td>Python</td>
-            <td>Flask</td>
-            <td>Requests</td>
-            <td>Heroku</td>
-        </tr>
-    </tr>
-</table>
+* Front-End
+    * HTML
+    * CSS
 
-<br><br>
+<br>
+
+* Back-End
+    * Python
+    * Flask
+    * Requests
+    * Heroku
+
+<br>
+
+> This is the main dependencies, the other dependencies can be see in archive requiriments.txt
+
+
+<br>
 
 ## Accesse the site <a href="https://flask-finace.herokuapp.com/">here</a>
 
 ![img1](https://user-images.githubusercontent.com/66230638/148692994-15ad189c-2b0b-40a4-becc-9fa0e84786b9.PNG)
-
-### This is the main dependencies, the other dependencies can be see in archive requiriments.txt
