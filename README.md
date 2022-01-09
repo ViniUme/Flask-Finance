@@ -39,5 +39,15 @@
 ## How to run
 <ol>
     <li>Install dependencies of program
-    <li>
+    <li>With terminal opened in folder of project, type the command:
+    
+    Flask run
 </ol>
+
+If terminal return:
+
+    Running on http://127.0.0.1:5000/(Press CTRL+C to quit)
+
+It's because it worked, just open this link in your browser
+
+    http://127.0.0.1:5000/
