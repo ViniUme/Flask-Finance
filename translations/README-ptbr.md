@@ -7,11 +7,10 @@
 ## Traduções
 
 - [English](https://github.com/ViniUme/Flask-Finance/)
-
-<br>
  
 <div align="center">
- ## Accesse the site <a href="https://flask-finace.herokuapp.com/">here</a>
+ 
+ ## Acesse o site <a href="https://flask-finace.herokuapp.com/">aqui</a>
 
  ![img1](https://user-images.githubusercontent.com/66230638/148692994-15ad189c-2b0b-40a4-becc-9fa0e84786b9.PNG)
 
@@ -19,11 +18,11 @@
 
 <br>
 
-## About
- This project is a website that use data of the a API, the <a href="https://hgbrasil.com/">HG Brasil</a>, in the area of <a href="https://hgbrasil.com/status/finance">Finance</a>. in this API, is available data of price of stock exchange, price of the principais coins, price of bitcoin in different sites and lot more. I made this site to learn to use the Flask, to make requests in APIs and to upgrade my skills in HTML and CSS
+## Sobre
+Este projeto é um site que usa dados de uma API, a <a href="https://hgbrasil.com/">HG Brasil</a>, na área de <a href="https://hgbrasil.com/status/finance">Finanças</a>. Nessa API, é diponibilizado os preços da bolsa de valores,preços das principais moedas,  preço do bitcoin em diferentes sites e muito mais. Eu fiz esse site para aprender a usar o Flask, para fazer requests em APIs e melhorar minhas habilidades em HTML e CSS.
 
 
-## Technologies Used
+## Tecnologias Usadas
 
 ### Front-End
 <div>
@@ -43,18 +42,19 @@
  </div>
 <br>
 
-## How to run
+## Como Executar
 <ol>
-    <li>Install dependencies of program
-    <li>With terminal opened in folder of project, type the command:
+    <li>Instale as dependencias do programa
+    <li>Com o terminal aberto na pasta do projeto, digite o comando:
     
     Flask run
+     
 </ol>
 
-If terminal return:
+Se o terminal retornar:
 
     Running on http://127.0.0.1:5000/(Press CTRL+C to quit)
 
-It's because it worked, just open this link in your browser
+É porque funcionou, apenas abra este link no seu navegador:
 
     http://127.0.0.1:5000/
